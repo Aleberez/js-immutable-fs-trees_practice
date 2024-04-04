@@ -26,6 +26,7 @@
   "type": "module",
   "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
   "dependencies": {
+    "@hexlet/immutable-fs-trees": "^0.7.1",
     "debug": "^4.3.4",
     "lodash": "^4.17.21"
   },
