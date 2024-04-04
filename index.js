@@ -1,7 +1,7 @@
 // @ts-check
 
 import {
-  mkfile, mkdir, isDirectory, isFile,
+  mkfile, mkdir, isDirectory, isFile, map,
 } from '@hexlet/immutable-fs-trees';
 
 isFile(mkfile('config')); // true
@@ -48,4 +48,10 @@ const tree = mkdir(
   { hidden: true },
 );
 
-console.log(tree);
+const callbackFn = (node) => {
+  const { name } = node;
+  const newName = name.toUpperCase();
+  return { ...node, name: newName };
+};
+
+console.dir(map(callbackFn, tree), { depth: null });
